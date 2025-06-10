@@ -1,10 +1,32 @@
+.forms {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.forms img {
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.forms form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .fordform {
     display: block;
     width: 300px;
     border: 1px solid #cccccc;
     border-radius: 10px;
     height: 26px;
-    margin: 8px;
+    margin-bottom: 10px;
     font-size: 13px;
     padding: 5px;
 }
@@ -15,46 +37,46 @@ select.fordform {
     color: #807d7d;
 }
 
-input:focus-visible {
-    outline: none;
-}
-
-select:focus-visible {
-    outline: none;
-}
-
-main div {
-    display: inline-block;
-    vertical-align: top;
+.termos-texto {
+    width: 300px;
+    margin: 8px auto 4px;
+    font-size: 13px;
+    color: #333;
     text-align: left;
-    padding-top: 30px;
-    padding-bottom: 30px;
 }
 
-.forms {
-    display: block;
-    text-align: center;
+.checkbox-container {
+    width: 300px;
+    margin: 4px auto;
+    font-size: 13px;
+    color: #333;
+    display: flex;
+    align-items: flex-start;
+    gap: 5px;
 }
 
-h2 {
-    text-align: left;
-    font-weight: 800;
+.checkbox-container input[type="checkbox"] {
+    margin-top: 4px;
 }
 
+.checkbox-container label {
+    line-height: 1.3;
+}
 
-button {
-    width: 200px;
+.checkbox-container a {
+    color: #004AAD;
+    text-decoration: underline;
+}
+
+.checkbox-container a:hover {
+    text-decoration: none;
+}
+
+#enviarBtn {
+    width: 300px;
     height: 40px;
-    margin-right: 8px;
-    float: right;
-}
-
-.titulo {
-    margin-left: 8px;
-}
-
-button[type="submit"] {
-    background-color: #004AAD; 
+    margin: 12px auto 0;
+    background-color: #004AAD;
     color: white;
     padding: 10px 20px;
     font-size: 16px;
@@ -64,7 +86,12 @@ button[type="submit"] {
     transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
-button[type="submit"]:hover {
-    transform: scale(1.1);
+#enviarBtn:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+#enviarBtn:hover:enabled {
+    transform: scale(1.03);
     background-color: #002f73;
 }
